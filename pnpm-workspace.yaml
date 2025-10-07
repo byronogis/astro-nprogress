@@ -26,6 +26,5 @@ catalogs:
     vitest: ^3.2.4
   types:
     '@types/node': ^24.7.0
-    '@types/nprogress': ^0.2.3
 
 cleanupUnusedCatalogs: true

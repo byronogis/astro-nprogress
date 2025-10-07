@@ -23,6 +23,9 @@ export function integration(userConfig: Config = {}): AstroIntegration {
             plugins: [
               vitePluginAstroNProgressConfig(resolvedConfig),
             ],
+            optimizeDeps: {
+              include: ['nprogress'],
+            },
           },
         })
       },

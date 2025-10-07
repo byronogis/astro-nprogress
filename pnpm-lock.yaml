@@ -52,9 +52,6 @@ catalogs:
     '@types/node':
       specifier: ^24.7.0
       version: 24.7.0
-    '@types/nprogress':
-      specifier: ^0.2.3
-      version: 0.2.3
 
 importers:
 
@@ -108,6 +105,9 @@ importers:
 
   packages/astro-nprogress:
     dependencies:
+      '@types/nprogress':
+        specifier: ^0.2.3
+        version: 0.2.3
       astro:
         specifier: ^5.0.0
         version: 5.14.1(@types/node@24.7.0)(jiti@2.6.1)(rollup@4.46.2)(terser@5.37.0)(tsx@4.19.2)(typescript@5.9.3)(yaml@2.8.1)
@@ -118,9 +118,6 @@ importers:
         specifier: ^0.2.0
         version: 0.2.0
     devDependencies:
-      '@types/nprogress':
-        specifier: catalog:types
-        version: 0.2.3
       typescript:
         specifier: catalog:deps
         version: 5.9.3

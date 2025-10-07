@@ -55,11 +55,11 @@
     "astro": "^5.0.0"
   },
   "dependencies": {
+    "@types/nprogress": "^0.2.3",
     "astro-view-transition-script": "^0.0.1",
     "nprogress": "^0.2.0"
   },
   "devDependencies": {
-    "@types/nprogress": "catalog:types",
     "typescript": "catalog:deps"
   }
 }
