@@ -1,7 +1,7 @@
 {
   "name": "astro-nprogress",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nprogress using in astro while the astro view transition is enabled.",
   "author": "Byron <byronogis@outlook.com>",
   "license": "MIT",
