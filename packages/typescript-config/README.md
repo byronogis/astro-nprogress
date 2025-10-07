@@ -1,0 +1,1 @@
+# @astro-nprogress/typescript-config

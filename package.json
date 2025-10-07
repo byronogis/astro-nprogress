@@ -1,0 +1,54 @@
+{
+  "name": "@astro-nprogress/monorepo",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.18.1",
+  "description": "Nprogress using in astro while the astro view transition is enabled.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byronogis/astro-nprogress.git"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "pnpm run -r --parallel -F './packages/*' dev",
+    "build": "pnpm run -r -F './packages/*' build",
+    "dev:full": "pnpm run -r --parallel dev",
+    "build:full": "pnpm run -r build",
+    "automd": "pnpm run -r automd && pnpm run root:automd",
+    "release": "bumpp -r && pnpm run -r release",
+    "root:automd": "automd --input='README*.md' && node ./scripts/copy-readme.mjs",
+    "root:lint": "eslint .",
+    "root:lint:fix": "eslint . --fix",
+    "typecheck": "pnpm run -r typecheck",
+    "test": "pnpm run -r test",
+    "clear": "pnpm run -r clear && rimraf -g '**/node_modules' '**/coverage'",
+    "update": "npx taze -r -I latest",
+    "prepare": "simple-git-hooks"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:lint",
+    "@astro-nprogress/typescript-config": "workspace:*",
+    "@types/node": "catalog:types",
+    "@vitest/coverage-v8": "catalog:test",
+    "automd": "catalog:deps",
+    "bumpp": "catalog:deps",
+    "eslint": "catalog:lint",
+    "jiti": "catalog:deps",
+    "lint-staged": "catalog:lint",
+    "rimraf": "catalog:deps",
+    "simple-git-hooks": "catalog:lint",
+    "tinyglobby": "catalog:deps",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:deps",
+    "vitest": "catalog:test"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}

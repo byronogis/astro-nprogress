@@ -1,0 +1,45 @@
+---
+import 'nprogress/nprogress.css'
+
+const id = 'astro-nprogress'
+---
+
+<div
+  {id}
+  transition:persist={id}
+/>
+
+<style>
+  #astro-nprogress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 9999;
+    pointer-events: none;
+  }
+</style>
+
+<script>
+import NProgress from 'nprogress'
+import { withViewTransition } from 'astro-view-transition-script'
+import config from 'virtual:astro-nprogress-config'
+
+const id = 'astro-nprogress'
+
+withViewTransition({
+  initial() {
+    NProgress.configure({
+      parent: `#${id}`,
+      ...config,
+    })
+  },
+  beforePreparation() {
+    NProgress.start()
+  },
+  afterPreparation() {
+    NProgress.done()
+  },
+})
+</script>

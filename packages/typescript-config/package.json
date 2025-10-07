@@ -1,0 +1,13 @@
+{
+  "name": "@astro-nprogress/typescript-config",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./*",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "release": "echo @astro-nprogress/typescript-config noneed release"
+  }
+}
