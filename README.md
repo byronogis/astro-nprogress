@@ -5,6 +5,7 @@
 [![npm version](https://img.shields.io/npm/v/astro-nprogress)](https://npmjs.com/package/astro-nprogress)
 [![npm downloads](https://img.shields.io/npm/dm/astro-nprogress)](https://npm.chart.dev/astro-nprogress)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/astro-nprogress)](https://bundlephobia.com/package/astro-nprogress)
+[![install size](https://badgen.net/packagephobia/install/astro-nprogress)](https://packagephobia.com/result?p=astro-nprogress)
 [![codecov](https://img.shields.io/codecov/c/gh/byronogis/astro-nprogress)](https://codecov.io/gh/byronogis/astro-nprogress)
 [![license](https://img.shields.io/github/license/byronogis/astro-nprogress)](https://github.com/byronogis/astro-nprogress/blob/main/LICENSE)
 
@@ -13,13 +14,6 @@
 [![JSDocs][jsdocs-src]][jsdocs-href]
 
 Nprogress using in astro while the astro view transition is enabled.
-
-> [!NOTE]
->
-> Rename `packages/astro-nprogress`.
->
-> Replace `astro-nprogress`, `Nprogress using in astro while the astro view transition is enabled.` and `byronogis` globally to use this template.
->
 
 ## Installation
 
@@ -36,13 +30,13 @@ npm install astro-nprogress
 yarn add astro-nprogress
 
 # pnpm
-pnpm install astro-nprogress
+pnpm add astro-nprogress
 
 # bun
 bun install astro-nprogress
 
 # deno
-deno install astro-nprogress
+deno install npm:astro-nprogress
 ```
 
 <!-- /automd -->
@@ -50,7 +44,30 @@ deno install astro-nprogress
 ## Basic Usage
 
 ```ts
-// usage
+// astro.config.ts
+
+import nprogress from 'astro-nprogress'
+import { defineConfig } from 'astro/config'
+
+export default defineConfig({
+  integrations: [nprogress()],
+})
+```
+
+```astro
+---
+// layout.astro
+import NProgress from 'astro-nprogress/components'
+---
+
+<html>
+  <!-- ... -->
+  <body>
+    <slot />
+    <NProgress />
+  </body>
+</html>
+
 ```
 
 <!-- automd:fetch url="gh:byronogis/.github/main/snippets/readme-contrib-node-pnpm.md" -->
@@ -95,7 +112,7 @@ Made by [@byronogis](https://github.com/byronogis) and [community](https://githu
 
 ---
 
-_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Wed Jan 29 2025)_
+_🤖 auto updated with [automd](https://automd.unjs.io) (last updated: Tue Oct 07 2025)_
 
 <!-- /automd -->
 

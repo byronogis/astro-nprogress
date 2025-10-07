@@ -12,7 +12,12 @@
     "url": "https://github.com/byronogis/astro-nprogress.git"
   },
   "bugs": "https://github.com/byronogis/astro-nprogress/issues",
-  "keywords": [],
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-component",
+    "ui"
+  ],
   "sideEffects": false,
   "publishConfig": {
     "access": "public",
